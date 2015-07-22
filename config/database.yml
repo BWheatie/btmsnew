@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: btms_development
+
+test:
+  <<: *default
+  database: btms_test
+
+production:
+  <<: *default
+  database: btms_production
