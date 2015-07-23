@@ -4,12 +4,12 @@ button.btn.js-menu-trigger.sliding-panel-button
 nav.js-menu.sliding-panel-content
  ul
     li
-      a href="javascript:void(0)" Sports
+      = link_to "Home", articles_path
     li
-      a href="javascript:void(0)" Authors
+      = link_to "Authors", authors_path
     li
       a href="javascript:void(0)" Contact
     li
-      a href="javascript:void(0)" New Post
+      = link_to "New Post", "articles/new"
 
 div.js-menu-screen.sliding-panel-fade-screen

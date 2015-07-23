@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @author.name
+p
+  strong Email:
+  = @author.email
+p
+  strong Twitter:
+  = @author.twitter
+p
+  strong Bio:
+  = @author.bio
+
+= link_to 'Edit', edit_author_path(@author)
+'|
+= link_to 'Back', authors_path

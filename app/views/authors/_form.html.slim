@@ -1,0 +1,11 @@
+= simple_form_for(@author) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :email
+    = f.input :twitter
+    = f.input :bio
+
+  .form-actions
+    = f.button :submit
