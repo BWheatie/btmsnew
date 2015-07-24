@@ -1,11 +1,11 @@
 = simple_form_for(@author) do |f|
   = f.error_notification
-
-  .form-inputs
-    = f.input :name
-    = f.input :email
-    = f.input :twitter
-    = f.input :bio
-
-  .form-actions
-    = f.button :submit
+  .form
+    .field
+      = f.input :name, placeholder: "Name"
+      = f.input :email, placeholder: "Email"
+      = f.input :@ :twitter, placeholder: "Twitter (without '@')"
+    .body
+      = f.text_area :bio, placeholder: "Include brief bio"
+    .button
+      = f.button :submit

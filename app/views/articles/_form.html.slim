@@ -5,10 +5,13 @@
       ul
         - @article.errors.full_messages.each do |message|
           li = message
+  .boxes
+    .field
+    = f.select :author
+    = f.input :title, placeholder: "Title"
+    = f.text_area :body, placeholder: "Article"
+    = f.label :published
+    = f.check_box :published
 
-  / = f.association :author
-  = f.input :title, placeholder: "Title"
-  = f.text_area :body, placeholder: "Article"
-  = f.label :published
-  = f.check_box :published
-  = f.submit
+    .button
+      = f.submit
