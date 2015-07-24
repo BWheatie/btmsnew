@@ -5,6 +5,12 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
+
+    if params[:q]
+      @articles = Article.search(params[:q]).order("created_at DESC")
+    else
+      @articles = Article.all.order('created_at DESC')
+    end
   end
 
   # GET /articles/1

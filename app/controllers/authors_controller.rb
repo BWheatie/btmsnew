@@ -5,6 +5,12 @@ class AuthorsController < ApplicationController
   # GET /authors.json
   def index
     @authors = Author.all
+
+    if params[:q]
+      @author = Author.search(params[:q]).order("created_at DESC")
+    else
+      @author = Author.all.order('created_at DESC')
+    end
   end
 
   # GET /authors/1
