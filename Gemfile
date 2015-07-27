@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'bourbon'
 gem 'bitters'
 gem 'coffee-rails'
+gem 'devise'
 gem 'foreman'
 gem 'jbuilder'
 gem 'jquery-rails'
@@ -17,7 +18,7 @@ gem 'skylight'
 gem 'slim-rails'
 gem 'turbolinks'
 gem 'uglifier'
-gem 'unicorn'
+
 
 group :production do
   gem 'rails_12factor'

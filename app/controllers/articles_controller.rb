@@ -68,7 +68,7 @@ class ArticlesController < ApplicationController
   end
 
   def upvote
-    @article = Article.find(params[:id])
+    @article = Article.find(params[:article_id])
     @article.score +=1
     if @article.save
     redirect_to :back
@@ -78,7 +78,7 @@ class ArticlesController < ApplicationController
   end
 
   def downvote
-    @article = Article.find(params[:id])
+    @article = Article.find(params[:article_id])
     @article.score -= 1
     if @article.save
     redirect_to :back
