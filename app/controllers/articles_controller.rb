@@ -67,6 +67,26 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def upvote
+    @article = Article.find(params[:id])
+    @article.score +=1
+    if @article.save
+    redirect_to :back
+    else
+      puts "You can only vote once. Internet better next time."
+    end
+  end
+
+  def downvote
+    @article = Article.find(params[:id])
+    @article.score -= 1
+    if @article.save
+    redirect_to :back
+    else
+      puts "You can only vote once. Internet better next time."
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_article

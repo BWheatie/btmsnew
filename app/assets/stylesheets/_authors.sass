@@ -1,16 +1,15 @@
-// Place all the styles related to the authors controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 .outer-container
 	@include span-columns(4)
-	.cards
+	padding: 20pt
+
+	#cards
 		@include span-columns(6)
 		@include display(flex)
 		@include flex-wrap(wrap)
 		@include justify-content(space-between)
 
 
-	.card 
+	#card 
 		$base-border-color: gainsboro !default
 		$base-border-radius: 3px !default
 		$base-background-color: white !default
@@ -38,7 +37,7 @@
 		position: relative
 
 
-		.card-image 
+		#card-image 
 			overflow: hidden
 			height: 150px
 			max-height: 150px
@@ -53,7 +52,7 @@
 
 
 
-		.card-header 
+		#card-header 
 			@include transition (all 0.2s ease-in-out)
 			background-color: $card-header-background
 			border-bottom: $card-border
@@ -63,7 +62,7 @@
 			padding: ($base-spacing / 3) ($base-spacing / 2)
 
 
-		.card-copy 
+		#card-copy 
 			font-size: 0.9em
 			line-height: 1.5em
 			padding: ($base-spacing / 2) ($base-spacing / 2)
@@ -85,5 +84,5 @@
 			&:active 
 				background-color: $card-background
 
-		.card-header 
+		#card-header 
 			background-color: $card-background

@@ -1,10 +1,13 @@
 - @articles.each do |article|
-  div class="side-image"
-    div class="images-wrapper"
-      div class="side-image-content"
-        h4 
-        = @author
-        h1 
-        = article.title
-        p 
-        / = article.summary
+  div.outer-container
+    div class="side-image"
+      div class="images-wrapper"
+        div class="side-image-content"
+          h4 
+          = @author
+          h1 
+          = article.title
+          p 
+          / = article.summary
+    = button_to "Upvote", { action: "link_to_article_upvote", id: @article_id}, method: :put
+    submit_tag url("https://cdn4.iconfinder.com/data/icons/web-icons-19/711/upvote-like-icon-tm-128.png")

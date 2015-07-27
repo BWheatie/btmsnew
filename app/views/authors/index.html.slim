@@ -1,11 +1,11 @@
 - @authors.each do |author|
   div.outer-container
-    div class="card"
-      div class="card-image"
+    div#card
+      div#card-image
         img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt=""
-      div class="card-header"
+      div#card-header
         h1 
         = author.name
-      div class="card-copy"
+      div#card-copy
         p 
         = author.bio
